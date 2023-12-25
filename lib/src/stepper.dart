@@ -3,9 +3,9 @@ import 'package:flutter/physics.dart';
 
 class StepperTouch extends StatefulWidget {
   const StepperTouch({
-    Key key,
-    this.initialValue,
-    this.onChanged,
+    key,
+    required this.initialValue,
+    required this.onChanged,
     this.direction = Axis.horizontal,
     this.withSpring = true,
   }) : super(key: key);
@@ -33,11 +33,11 @@ class StepperTouch extends StatefulWidget {
 
 class _Stepper2State extends State<StepperTouch>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation _animation;
-  int _value;
-  double _startAnimationPosX;
-  double _startAnimationPosY;
+  late AnimationController _controller;
+  late Animation<Offset> _animation;
+  late int _value;
+  late double _startAnimationPosX;
+  late double _startAnimationPosY;
 
   
   @override
@@ -105,6 +105,7 @@ class _Stepper2State extends State<StepperTouch>
                 child: Icon(Icons.add, size: 40.0, color: Colors.white),
               ),
               GestureDetector(
+                key: Key('dragButton'),
                 onHorizontalDragStart: _onPanStart,
                 onHorizontalDragUpdate: _onPanUpdate,
                 onHorizontalDragEnd: _onPanEnd,

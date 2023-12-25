@@ -1,10 +1,8 @@
-name: Counter App
-description: a flutter stepper widget with nice aniamtion
+name: counter
+description: a flutter stepper widget with nice
 version: 0.0.1
-author: Raj Chowdhury
-homepage: https://github.com/Rajchowdhury420
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -13,7 +11,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  integration_test:
+    sdk: flutter
+  test:
+  test_coverage:
 
 flutter:
-
-// add your own requirement if u want
